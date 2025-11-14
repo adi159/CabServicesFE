@@ -1,0 +1,67 @@
+[
+  {
+    "id": "veh_1",
+    "name": "ZoomCab",
+    "model": "X1 Sedan",
+    "rating": 4.6,
+    "pricePerKm": 12,
+    "seats": 4,
+    "photos": [
+      "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1200&q=80",
+      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=1200&q=80"
+    ],
+    "servingCities": ["Mumbai, Maharashtra", "Pune, Maharashtra", "Surat, Gujarat"]
+  },
+  {
+    "id": "veh_2",
+    "name": "CityRide",
+    "model": "CR Hatchback",
+    "rating": 4.3,
+    "pricePerKm": 9,
+    "seats": 4,
+    "photos": [
+      "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=1200&q=80",
+      "https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642?w=1200&q=80"
+    ],
+    "servingCities": ["Delhi, Delhi", "Agra, Uttar Pradesh", "Lucknow, Uttar Pradesh"]
+  },
+  {
+    "id": "veh_3",
+    "name": "PremiumGo",
+    "model": "PG Executive",
+    "rating": 4.8,
+    "pricePerKm": 20,
+    "seats": 4,
+    "photos": [
+      "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=1200&q=80",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80"
+    ],
+    "servingCities": ["Bengaluru, Karnataka", "Chennai, Tamil Nadu", "Coimbatore, Tamil Nadu"]
+  },
+  {
+    "id": "veh_4",
+    "name": "FamilyVan",
+    "model": "FV 7-Seater",
+    "rating": 4.4,
+    "pricePerKm": 16,
+    "seats": 7,
+    "photos": [
+      "https://images.unsplash.com/photo-1549921296-3a9b1f92f5d0?w=1200&q=80",
+      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=1200&q=80"
+    ],
+    "servingCities": ["Mumbai, Maharashtra", "Bengaluru, Karnataka", "Hyderabad, Telangana"]
+  },
+  {
+    "id": "veh_5",
+    "name": "SwiftGo",
+    "model": "SG Compact",
+    "rating": 4.1,
+    "pricePerKm": 8,
+    "seats": 4,
+    "photos": [
+      "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=1200&q=80",
+      "https://images.unsplash.com/photo-1427303262988-d8ef5d5f5f0d?w=1200&q=80"
+    ],
+    "servingCities": ["Jaipur, Rajasthan", "Agra, Uttar Pradesh", "Ludhiana, Punjab"]
+  }
+]
