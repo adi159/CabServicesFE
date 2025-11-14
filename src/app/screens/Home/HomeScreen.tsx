@@ -1,5 +1,6 @@
+// src/app/screen/Home/HomeScreen.tsx
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import type { RootStackParamList } from '../../../../App'; // <-- App.tsx is at project root
+import type { RootStackParamList } from '../../../../App'; // adjust if App.tsx path differs
 import React, { useState } from 'react';
 import {
   View,
@@ -9,12 +10,11 @@ import {
   Platform,
   KeyboardAvoidingView,
 } from 'react-native';
-import DateTimePicker, { Event } from '@react-native-community/datetimepicker';
+import DateTimePicker, { DateTimePickerEvent } from '@react-native-community/datetimepicker';
 import styles from './HomeScreen.styles';
 import LocalAutocomplete from '../../components/LocalAutocomplete/LocalAutocomplete';
 
 type City = { name: string; lat?: number; lng?: number };
-
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
 const HomeScreen: React.FC<Props> = ({ navigation }) => {
@@ -24,13 +24,26 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
   const [showPicker, setShowPicker] = useState(false);
   const [refund, setRefund] = useState(false);
 
-  // Show picker for selecting date
   const openDatePicker = () => setShowPicker(true);
 
-  const onChangeDate = (event: Event, selected?: Date) => {
-    // On Android, pressing cancel returns 'dismissed' event; selected may be undefined
-    setShowPicker(Platform.OS === 'ios'); // keep open on iOS, close on Android
-    if (selected) setDate(selected);
+  // Correct typing here: use DateTimePickerEvent
+  const onChangeDate = (event: DateTimePickerEvent, selectedDate?: Date | undefined) => {
+    // On Android the picker returns an event.type: 'set' | 'dismissed'
+    // On iOS the event may behave slightly different; selectedDate can be undefined when dismissed
+    if (Platform.OS === 'android') {
+      // close the picker on Android regardless of set/dismissed
+      setShowPicker(false);
+      if (event.type === 'set' && selectedDate) {
+        setDate(selectedDate);
+      }
+      // if dismissed, do nothing
+    } else {
+      // iOS: keep open if you want (common pattern: iOS inline spinner), but here we close only if needed
+      if (selectedDate) setDate(selectedDate);
+      // keep showPicker as true for iOS if you want inline; here we leave it true so the component can remain visible on iOS
+      // If you prefer to close on iOS after selection, uncomment:
+      // setShowPicker(false);
+    }
   };
 
   const onSearch = () => {
@@ -39,7 +52,6 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
       return;
     }
 
-    // navigate to Results
     navigation.navigate('Results', {
       source,
       destination,
@@ -53,7 +65,7 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
       <View style={styles.container}>
         <Text style={styles.title}>Book a Cab</Text>
 
-        {/* 4 car placeholders row (same as before) */}
+        {/* 4 car placeholders row */}
         <View style={styles.carsRow}>
           <View style={styles.carItem}><View style={styles.carCircle} /></View>
           <View style={{ width: 12 }} />
