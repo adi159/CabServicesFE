@@ -2,6 +2,43 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
+Prerequisites 
+Installation and Setup Process:
+  
+https://reactnative.dev/docs/set-up-your-environment
+
+1. VS Code
+2. Install Node.js
+3. Install Java JDK 17 (for Android)
+4. Install Android Studio + SDKs; set ANDROID_HOME SDK path and add platform-tools to PATH
+5. Install Xcode (for iOS, on macOS)
+6. Install Watchman (macOS): brew install watchman
+7. Install React Native CLI: npm i -g react-native-cli 
+8.Create RN app - npx @react-native-community/cli init CSAPP
+9. cd CSAPP
+
+Run Application: npm scripts in package.json
+
+1. npm install --save-dev @react-native-community/cli
+2.  npx react-native start 
+3. npx react-native run-android
+3. npm install
+4. npx react-native clean
+5. npm start --reset-cache
+
+Enable Development mode for mobile application:
+1. Go to link: chrome://inspect/#devices
+2. Click on Discover USB devices
+3. Open project android folder in android studio and lets complete grade file sync
+
+
+VS Code Extension:
+1. ES lint
+2. React Native CLI
+3. Prettier
+4. TypeScript 
+
+
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
 
 ## Step 1: Start Metro
