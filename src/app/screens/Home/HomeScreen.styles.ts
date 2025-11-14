@@ -1,12 +1,12 @@
 import { StyleSheet } from 'react-native';
-
-const PRIMARY = '#f2b03f';
+import { COLORS } from '../../theme'; // adjust if your folder depth is different
 
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: COLORS.white,
   },
+
   container: {
     flex: 1,
     paddingHorizontal: 20,
@@ -17,8 +17,9 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 26,
     fontWeight: '700',
-    color: '#111',
+    color: COLORS.dark,
     marginBottom: 18,
+    textAlign: 'center',
   },
 
   /* Cars row */
@@ -27,50 +28,55 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+
   carItem: {
-    width: 80,
+    width: 70,
     alignItems: 'center',
   },
+
   carCircle: {
     width: 56,
     height: 56,
     borderRadius: 28,
-    backgroundColor: '#fff7e6',
+    backgroundColor: '#fff', // Optional: If you want, I can convert this too
     borderWidth: 1,
-    borderColor: '#f0d4a3',
+    borderColor: COLORS.primary,
     alignItems: 'center',
     justifyContent: 'center',
   },
 
   /* Form */
   form: {
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
     borderRadius: 10,
     padding: 16,
-    shadowColor: '#000',
+
+    shadowColor: COLORS.primary,
     shadowOffset: { width: 0, height: 6 },
     shadowOpacity: 0.06,
     shadowRadius: 8,
     elevation: 2,
   },
+
   inputLabel: {
     fontSize: 12,
-    color: '#666',
+    color: '#666', // optional to theme
     marginBottom: 6,
   },
 
   inputTouchable: {
     height: 44,
     borderWidth: 1,
-    borderColor: '#e6e6e6',
+    borderColor: '#e6e6e6', // optional to theme
     borderRadius: 8,
     paddingHorizontal: 12,
     justifyContent: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
   },
+
   inputTouchableText: {
     fontSize: 14,
-    color: '#111',
+    color: COLORS.dark,
   },
 
   /* Refund row */
@@ -79,32 +85,38 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 12,
   },
+
   checkbox: {
     width: 22,
     height: 22,
     borderRadius: 4,
     borderWidth: 1.5,
-    borderColor: '#ccc',
+    borderColor: '#ccc', // optional to theme
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 10,
   },
+
   checkboxChecked: {
-    borderColor: PRIMARY,
+    borderColor: COLORS.primary,
   },
+
   checkboxInner: {
     width: 12,
     height: 12,
     borderRadius: 2,
-    backgroundColor: PRIMARY,
+    backgroundColor: COLORS.primary,
   },
+
   refundTextWrap: {
     flex: 1,
   },
+
   refundTextBold: {
     fontSize: 14,
-    color: '#111',
+    color: COLORS.dark,
   },
+
   refundNoteSmall: {
     fontSize: 11,
     color: '#777',
@@ -117,12 +129,13 @@ const styles = StyleSheet.create({
     marginTop: 18,
     height: 46,
     borderRadius: 10,
-    backgroundColor: PRIMARY,
+    backgroundColor: COLORS.primary,
     alignItems: 'center',
     justifyContent: 'center',
   },
+
   searchBtnText: {
-    color: '#fff',
+    color: COLORS.white,
     fontWeight: '700',
     fontSize: 15,
   },

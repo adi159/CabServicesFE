@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
+import { COLORS } from '../../theme';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f2b03f', // dark navy (change to brand color)
+    backgroundColor: COLORS.primary,
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 24,
@@ -15,13 +16,13 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 36,
-    color: '#fff',
+    color: COLORS.white,
     fontWeight: '700',
     letterSpacing: 1,
   },
   subtitle: {
     marginTop: 8,
-    color: '#fff',
+    color: COLORS.white,
     fontSize: 14,
   },
 });
