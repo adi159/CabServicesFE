@@ -52,12 +52,12 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
       return;
     }
 
-    navigation.navigate('Results', {
-      source,
-      destination,
-      date: date.toISOString().slice(0, 10),
-      refund,
-    });
+    // navigation.navigate('Results', {
+    //   source,
+    //   destination,
+    //   date: date.toISOString().slice(0, 10),
+    //   refund,
+    // });
   };
 
   return (

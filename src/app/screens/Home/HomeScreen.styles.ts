@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     borderRadius: 28,
     backgroundColor: '#fff', // Optional: If you want, I can convert this too
     borderWidth: 1,
-    borderColor: COLORS.primary,
+    borderColor: '#fc9209ff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     marginTop: 18,
     height: 46,
     borderRadius: 10,
-    backgroundColor: COLORS.primary,
+    backgroundColor: '#fc9209ff',
     alignItems: 'center',
     justifyContent: 'center',
   },

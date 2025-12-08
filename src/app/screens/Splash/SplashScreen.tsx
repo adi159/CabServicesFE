@@ -5,7 +5,7 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 type RootStackParamList = {
   Splash: undefined;
-  Home: undefined;
+  SignIn: undefined;
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Splash'>;
@@ -30,7 +30,7 @@ const SplashScreen: React.FC<Props> = ({ navigation }) => {
     ]).start();
 
     // After 2.5 seconds navigate to Home
-    const t = setTimeout(() => navigation.replace('Home'), 2500);
+    const t = setTimeout(() => navigation.replace('SignIn'), 2500);
     return () => clearTimeout(t);
   }, [navigation, opacity, scale]);
 

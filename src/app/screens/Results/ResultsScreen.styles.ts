@@ -13,18 +13,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     borderBottomWidth: 1,
     borderBottomColor: '#eee',
-    backgroundColor: COLORS.primary
+    backgroundColor: COLORS.white
   },
 
   headerTitle: {
     fontSize: 20,
     fontWeight: '700',
-    color: COLORS.white,
+    color: COLORS.dark,
   },
 
   headerSub: {
     fontSize: 13,
-    color: COLORS.white,
+    color: COLORS.dark,
     marginTop: 4,
   },
 
